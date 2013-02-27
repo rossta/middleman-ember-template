@@ -26,6 +26,14 @@ Usage
 
 1. Download and install into ~/.middleman/ember (you'll need to create the directory it doesn't already exist)
 
-2.  Initialize a new middleman project with `middleman init my_project --template=ember`
+```
+$ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/ember
+```
+
+2. Initialize a new middleman project
+
+```
+middleman init my_project --template=ember
+```
 
 You can read more about project templates on the [Middleman site](http://middlemanapp.com/getting-started/welcome/).
