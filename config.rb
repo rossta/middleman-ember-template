@@ -2,6 +2,11 @@ require "bundler/setup"
 Bundler.require
 
 ###
+# LiveReload
+###
+activate :livereload
+
+###
 # Compass
 ###
 
