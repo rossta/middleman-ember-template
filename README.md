@@ -1,4 +1,4 @@
-middleman-ember-template: with Ember.js  
+middleman-ember-template: with Ember.js
 =======================================
 
 **Template Layout**
@@ -7,13 +7,14 @@ middleman-ember-template: with Ember.js
 		index.html
 		stylesheets/
 		images/
-		app/
+		javascripts/
 			main.js
 			routes.js
 			controllers/  foo_controller.js
+			models/       foo.js
+			routes/  			foo_route.js
 			views/        foo_view.js
 			templates/    foo.handlebars
-			models/       foo.js
 	vendor/
 		javascripts/
 		stylesheets/

@@ -51,7 +51,7 @@ Bundler.require
 # end
 
 set :css_dir, "stylesheets"
-set :js_dir, "app"
+set :js_dir, "javascripts"
 set :images_dir, "images"
 set :layout, nil
 set :js_assets_paths, ["#{root}/vendor/javascripts/"]
@@ -64,6 +64,9 @@ configure :build do
 
   # Minify Javascript on build
   # activate :minify_javascript
+
+  # Enable asset hash
+  # activate :asset_hash
 
   # Enable cache buster
   # activate :cache_buster
