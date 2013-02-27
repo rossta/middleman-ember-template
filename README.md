@@ -24,13 +24,13 @@ You may also want to checkout the [Ember.js with Middleman example](https://gith
 Usage
 -----
 
-1. Download or clone into ~/.middleman/ember
+Download or clone into ~/.middleman/ember
 
 ```
 $ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/ember
 ```
 
-2. Initialize a new middleman project
+Initialize a new middleman project
 
 ```
 $ middleman init my_project --template=ember
