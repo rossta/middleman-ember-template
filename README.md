@@ -5,19 +5,23 @@ middleman-ember-template: with Ember.js
 
 	source/
 		index.html
-		stylesheets/
 		images/
+		stylesheets/
 		javascripts/
+			application.js
 			main.js
-			routes.js
 			controllers/  foo_controller.js
 			models/       foo.js
 			routes/  			foo_route.js
 			views/        foo_view.js
 			templates/    foo.handlebars
 	vendor/
-		javascripts/
 		stylesheets/
+		javascripts/
+			ember-data.js
+			ember.js
+			handlebars.js
+			jquery.js
 
 You may also want to checkout the [Ember.js with Middleman example](https://github.com/GutenYe/example-ember-with-middleman).
 
