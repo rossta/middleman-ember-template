@@ -24,7 +24,7 @@ You may also want to checkout the [Ember.js with Middleman example](https://gith
 Usage
 -----
 
-1. Download and install into ~/.middleman/ember (you'll need to create the directory it doesn't already exist)
+1. Download or clone into ~/.middleman/ember
 
 ```
 $ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/ember
@@ -33,7 +33,7 @@ $ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/em
 2. Initialize a new middleman project
 
 ```
-middleman init my_project --template=ember
+$ middleman init my_project --template=ember
 ```
 
 You can read more about project templates on the [Middleman site](http://middlemanapp.com/getting-started/welcome/).
