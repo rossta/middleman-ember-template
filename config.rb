@@ -59,7 +59,6 @@ set :css_dir, "stylesheets"
 set :js_dir, "javascripts"
 set :images_dir, "images"
 set :layout, nil
-set :js_assets_paths, ["#{root}/vendor/javascripts/"]
 set :css_assets_paths, ["#{root}/vendor/stylesheets/"]
 
 # Build-specific configuration
@@ -86,4 +85,22 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+after_configuration do
+  root = Dir.pwd
+  tmp_path = Pathname.new(File.join("#{root}/tmp/ember-rails"))
+
+  FileUtils.mkdir_p(tmp_path)
+  FileUtils.cp(::Ember::Source.bundled_path_for("ember.js"), tmp_path.join("ember.js"))
+  FileUtils.cp(::Ember::Data::Source.bundled_path_for("ember-data.js"), tmp_path.join("ember-data.js"))
+  sprockets.append_path(tmp_path)
+
+  # Make the handlebars.js and handlebars.runtime.js bundled
+  # in handlebars-source available.
+  sprockets.append_path(File.expand_path('../', ::Handlebars::Source.bundled_path))
+
+  # Allow a local variant override
+  ember_path = Pathname.new(File.join("#{root}/vendor/assets/ember"))
+  sprockets.prepend_path(ember_path.to_s) if ember_path.exist?
 end
