@@ -18,9 +18,6 @@ middleman-ember-template: with Ember.js
 	vendor/
 		stylesheets/
 		javascripts/
-			ember-data.js
-			ember.js
-			handlebars.js
 			jquery.js
 
 You may also want to checkout the [Ember.js with Middleman example](https://github.com/GutenYe/example-ember-with-middleman).
@@ -34,10 +31,21 @@ Download or clone into ~/.middleman/ember
 $ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/ember
 ```
 
+Install middleman > 3.1, at present that means:
+```
+gem install middleman --pre
+```
+
 Initialize a new middleman project
 
 ```
 $ middleman init my_project --template=ember
+```
+
+Then bundle, and start the middleman server
+```
+bundle
+middleman server
 ```
 
 You can read more about project templates on the [Middleman site](http://middlemanapp.com/getting-started/welcome/).

@@ -7,6 +7,16 @@ Bundler.require
 activate :livereload
 
 ###
+# Sprockets
+###
+activate :sprockets
+
+###
+# Ember
+###
+activate :ember
+
+###
 # Compass
 ###
 
@@ -85,22 +95,8 @@ configure :build do
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+  set :ember_variant, :production
 end
 
 after_configuration do
-  root = Dir.pwd
-  tmp_path = Pathname.new(File.join("#{root}/tmp/ember-rails"))
-
-  FileUtils.mkdir_p(tmp_path)
-  FileUtils.cp(::Ember::Source.bundled_path_for("ember.js"), tmp_path.join("ember.js"))
-  FileUtils.cp(::Ember::Data::Source.bundled_path_for("ember-data.js"), tmp_path.join("ember-data.js"))
-  sprockets.append_path(tmp_path)
-
-  # Make the handlebars.js and handlebars.runtime.js bundled
-  # in handlebars-source available.
-  sprockets.append_path(File.expand_path('../', ::Handlebars::Source.bundled_path))
-
-  # Allow a local variant override
-  ember_path = Pathname.new(File.join("#{root}/vendor/assets/ember"))
-  sprockets.prepend_path(ember_path.to_s) if ember_path.exist?
 end
