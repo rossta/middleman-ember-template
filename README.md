@@ -33,7 +33,7 @@ $ git clone git://github.com/rossta/middleman-ember-template.git ~/.middleman/em
 
 Install middleman > 3.1, at present that means:
 ```
-gem install middleman --pre
+gem install middleman
 ```
 
 Initialize a new middleman project
